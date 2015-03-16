@@ -1,0 +1,14 @@
+[% IF pages %]
+	<div style="background-color:#ADD8E6;width:830px;">
+	[% FOREACH p = pages %]
+		<span style="padding:4px;[%IF p==page%]font-weight:bold;[%END%]">
+			[% IF p != '...' %]
+				<a href="?page=[%p%]&order=[%order%]">[% p %]</a>
+			[% ELSE %]
+				[% p %]
+			[% END %]
+		</span>
+	[% END %]
+	</div>
+[%END%]
+

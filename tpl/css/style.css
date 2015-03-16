@@ -1,0 +1,44 @@
+body {
+	height: 100%;
+	margin: 0 0 0 .1em;
+	padding: 0px;
+	font-size: 14px;;
+	font-family: verdana, arial, helvetica, sans-serif;
+	line-height: 120%;
+	background: #fff;
+	color: #555555;
+}
+
+input,select,textarea,option { 
+	font-family:Arial;
+	font-size:14px; 
+	border: 1px solid #999999;
+}
+
+div.error {
+	color:red;
+	text-align:center;
+	padding:5px;
+}
+
+.authform {
+	text-align:center;
+	margin-top:20px;
+}
+
+.gtable { 
+	border-collapse: collapse;
+	margin: 10px 0 0 0;
+}
+.gtable TD { 
+	padding:5px; 
+	border-bottom:#eeeeee 1px solid; 
+}
+.gtable TH { 
+	color:#9f9f9f; 
+	background-color:#FAF0E6; 
+	padding:5px; 
+	border-bottom:#eeeeee 1px solid; 
+	border-top:#eeeeee 2px solid;
+	text-align:left; 
+}
