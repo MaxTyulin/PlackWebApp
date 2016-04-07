@@ -1,0 +1,28 @@
+<div style="margin-left:40px;">
+[% IF tasks %]
+	<table class="gtable">
+		<tr>
+			<th><a href="?order=1&page=[%page%]">#</a>[%IF order==1%]&nbsp;&#8595;[%END%]</th>
+			<th><a href="?order=2&page=[%page%]">статус</a>[%IF order==2%]&nbsp;&#8595;[%END%]</th>
+			<th><a href="?order=3&page=[%page%]">название</a>[%IF order==3%]&nbsp;&#8595;[%END%]</th>
+			<th><a href="?order=4&page=[%page%]">дата</a>[%IF order==4%]&nbsp;&#8595;[%END%]</th>
+		</tr>
+	[% SET i=0%]
+	[% FOREACH task IN  tasks %]
+		<tr>
+			<td width="40px;">[% task.ID %]</td>
+			<td width="300px;">[% task.isDone %]</td>
+			<td width="300px;">[% task.TDName %]</td>
+			<td width="150px">[% task.TDDate %]</td> 
+		</tr>
+	[%END%]
+	</table>
+	[% INCLUDE pages.tt2 %]
+[%END%]
+<div>Новая задача:</div>
+	<form action="todo" method="POST">
+	<input type="text" name="tname" id="tname"/>
+	<input type="submit" value="Добавить">
+	</form>
+
+</div>
